@@ -1092,7 +1092,7 @@ int lgw_start(void) {
     /* Configure the pseudo-random generator (For Debug) */
     dbg_init_random();
 
-    if (CONTEXT_COM_TYPE == LGW_COM_SPI) {
+    if (false && CONTEXT_COM_TYPE == LGW_COM_SPI) {
         /* Find the temperature sensor on the known supported ports */
         for (i = 0; i < (int)(sizeof I2C_PORT_TEMP_SENSOR); i++) {
             ts_addr = I2C_PORT_TEMP_SENSOR[i];
@@ -1221,7 +1221,7 @@ int lgw_stop(void) {
         err = LGW_HAL_ERROR;
     }
 
-    if (CONTEXT_COM_TYPE == LGW_COM_SPI) {
+    if (false && CONTEXT_COM_TYPE == LGW_COM_SPI) {
         DEBUG_MSG("INFO: Closing I2C for temperature sensor\n");
         x = i2c_linuxdev_close(ts_fd);
         if (x != 0) {
