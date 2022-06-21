@@ -1101,7 +1101,7 @@ static int parse_gateway_configuration(const char * conf_file) {
     MSG("INFO: packets received with no CRC will%s be forwarded\n", (fwd_nocrc_pkt ? "" : " NOT"));
 
     /* GPS module TTY path (optional) */
-    str = json_object_get_string(conf_obj, "gps_tty_path");
+    //str = json_object_get_string(conf_obj, "gps_tty_path");
     if (str != NULL) {
         strncpy(gps_tty_path, str, sizeof gps_tty_path);
         gps_tty_path[sizeof gps_tty_path - 1] = '\0'; /* ensure string termination */
